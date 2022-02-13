@@ -1,12 +1,13 @@
 @import "./variables.module.scss";
 .container {
-  padding: 1em;
-  margin: 1em;
-  height: 351px;
+  padding: 2em;
+  margin: 1em auto;
+  min-height: 351px;
   min-width: 500px;
   border: 1px solid $primary-color;
-  border-radius: 45px;
+  border-radius: 40px;
   display: grid;
+  gap: 1em;
 
   .question {
     font-size: 20px;
@@ -15,6 +16,7 @@
     color: $text-color;
     text-align: center;
     animation: fadeIn 1s ease-out;
+    margin: 0;
   }
 }
 

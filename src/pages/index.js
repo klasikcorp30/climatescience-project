@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import QuestionContainer from "../components/QuestionContainer";
+import QuestionContainer from "../components/QuestionContainer.tsx";
 import styles from "../sass/Home.module.scss";
 
 export default function Home() {

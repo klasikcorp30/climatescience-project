@@ -1,13 +1,15 @@
 import styles from "../sass/Response.module.scss";
 
-export default function Response({ name }) {
+
+export default function Response(response:any): JSX.Element {
   return (
-    <div className={`${styles.response} ${styles[`slideAnimation${name}`]}`}>
+    <div className={`${styles.response} ${styles[`slideAnimation${response.position}`]}`}>
       <label className={styles.inputContainer}>
         <input type="radio" name={"Answer"} />
         <span className="checkmark"></span>
       </label>
-      lorem ipsum dolor sit amet consectetur adipirrrsicing elit.
+     <p>{response.response}</p>
+     
     </div>
   );
 }
