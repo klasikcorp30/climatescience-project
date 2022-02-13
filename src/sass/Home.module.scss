@@ -1,3 +1,5 @@
+@import "./variables.module.scss";
+
 .container {
   padding: 0 2rem;
 }
@@ -29,7 +31,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: var(--primaryColor);
   text-decoration: none;
 }
 
@@ -43,6 +45,8 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  color: $primary-color;
+  font-family: "Work Sans", sans-serif;
 }
 
 .title,
@@ -88,8 +92,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
 }
 
 .card h2 {

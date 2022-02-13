@@ -1,0 +1,78 @@
+@import "./variables.module.scss";
+
+.response {
+  padding: 1em;
+  justify-content: center;
+  height: 69px;
+  min-width: 438px display grid;
+  box-shadow: 0px 3px 43px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 45px;
+  display: grid;
+  grid-template-columns: 10% auto;
+  margin: auto;
+  color: $primary-color;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  //   Hide native check and create a custom check
+  .inputContainer {
+    input[type="radio"] {
+      appearance: none;
+
+      color: $primary-color;
+      width: 27.5px;
+      height: 27.5px;
+      border: 3px solid $primary-color;
+      border-radius: 50%;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+
+      &::before {
+        content: "";
+        width: 27.5px;
+        height: 27.5px;
+        transform: scale(0);
+        transition: 120ms transform ease-out;
+        box-shadow: inset 1.3em 1.3em $primary-color;
+        border-radius: 50%;
+      }
+      &:checked::before {
+        transform: scale(1);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+//Slide up animation
+.slideAnimation1 {
+  animation: slideUp 1s, fadeIn 1s ease-out;
+  @keyframes slideUp {
+    from {
+      transform: translateY(50%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  // fadeIn animation
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.slideAnimation2 {
+  @extend .slideAnimation1;
+
+  animation: slideUp 2s, fadeIn 1s ease-out;
+}
+.slideAnimation3 {
+  @extend .slideAnimation1;
+  animation: slideUp 3s, fadeIn 1s ease-out;
+}

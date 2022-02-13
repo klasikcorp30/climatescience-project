@@ -1,0 +1,29 @@
+@import "./variables.module.scss";
+.container {
+  padding: 1em;
+  margin: 1em;
+  height: 351px;
+  min-width: 500px;
+  border: 1px solid $primary-color;
+  border-radius: 45px;
+  display: grid;
+
+  .question {
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    color: $text-color;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+  }
+}
+
+// fadeIn animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
